@@ -1,5 +1,5 @@
 FROM bitnami/golang:latest AS builder
-RUN GOPROXY=https://goproxy.cn go install tailscale.com/cmd/derper@main
+RUN go install tailscale.com/cmd/derper@main
 
 FROM debian:stable-slim
 WORKDIR /app
